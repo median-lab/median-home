@@ -1,13 +1,20 @@
 language: ruby
 rvm:
-  - 2.4.1
+  - 2.7.1
 branches:
   only:
   - master
-before_script: cp -rfv docs/_includes .
-script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
+before_script: 
+  # - cp -rfv docs/_includes .
+  - chmod +x ./_includes/scripts/cibuild
+# path to our build script. 
+# Travis will run `bundle install` by default before running our script
+script: ./_includes/scripts/cibuild
 deploy:
   provider: pages
+  repo: median-lab/median-home
+  email: wanglj7@mail.sustech.edu.cn
+  name: median-lab
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: _site
