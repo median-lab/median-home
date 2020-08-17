@@ -4,6 +4,9 @@ rvm:
 branches:
   only:
   - master
+env:
+  global:
+    secure: "TODt5FmFYPdOLHe6MPBDIyapZYc6UYlJS2MEqAPGOn9deTCl7OICz7LAU1dXMnR9DnoFeIe7rxzmhTrtAu10eZZm4Es9kV5AdQdZlOtl9t+niEgsoWX/Mhxq2xAeNgd/3jHaTK0kNZnDNK42pGOxTRR6YNe1Zg2jQ5DFHk0y0uZxbWx8KW7wXVkyIeIQ402LeypCjm8X1eK5jatlT87j+iJrQRX5xu21zBG17w2xnHSN1bTZPK/ABwtNS98GRnb0yHTrmhzsLaQ+KQl4ysCCQzguP3R0XnXGqmVLC70rDBgpa9a5gBxAhpk53EqJU/zR8CWnl7sR+EIcRc+mewvYzd4jnTrc04LdhwivdecSU9P+ehYqmwG1j1LGNZ5gi/QrD6ZvM1n7OqHkTI1QLcifmx6HcNxd8kZkhU09xqFGDYPq0SgXdb8usST59NR1aymWVK6y9F7Wndn2bzSoLbia7WbI5+DX81UL5Zbed6giA/mFLtpssV2ydjDeXk8JMNyPcV2YYbm92CTz4/vRTHonivUEzhQA2Tqi1qZD9huGNdQ3vxy7gNJNNKNEEFlDxxFnAoXjijSEzopL6RMvm/MpWVB/8Weop9fslkK8k+4MZ8KPIbtFWsWNwvpPBrG68nI/zeHEJwqtBQauNYwLN4gsBPU0pd0VOaaa63DS0djqMHc="
 before_script: 
   # - cp -rfv docs/_includes .
   - chmod +x ./_includes/scripts/cibuild
