@@ -1,3 +1,1 @@
----
----
-{%- include search-providers/default/search-data.js -%}
+window.TEXT_SEARCH_DATA={'news':[{'title':"Test - Article with Long TOC",'url':"/news/2015-01-01-article-with-long-toc.html"},{'title':"Test - Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title",'url':"/news/2015-02-02-very-long-title.html"},{'title':"Jekyll - Paragraphs",'url':"/news/2016-10-10-paragraphs.html"},{'title':"TeXt - Author",'url':"/news/2017-04-15-author.html"},{'title':"TeXt - Modify Date",'url':"/news/2017-04-19-modify-date.html"},{'title':"TeXt - Additional Styles",'url':"/news/2017-08-08-additional-styles.html"},{'title':"NEWS! - What's NEXT",'url':"/news/2019-10-09-what-next.html"}],'posts':[]};
