@@ -8,12 +8,14 @@ env:
   global:
     secure: TI2ZFR7lkYUuT9ykxwCDrHWO+Z3XMkcoPhei3QV3IbQ7fp7O164kRnMju8LXZj6AeConYHMTjYnSLcuue2VOUHvdu9O4IyVWsJw/Zj+yroXVchTW/MnXioU9cizuxx0LIkgTTtd0uCVzkiaiherpiAl8mkZeMRGITExa2gtwLGs0ZewMtLVw7u1g2YCOgJ/cB9VGSnlYjQgEAyRaIMf9XnX8D7pJBNl9H+t3g6hvdRlDl0t6ORPVuFkFKYiB9WsCqaZnn5F1ujxYhan3Qs1ARu8nVRhULxjdJEH0qVqjS7M6+t6MtuwGb80Jp+PcKO3s+KH2ERecQFoi93fSTcY3ag9ew+NEjV2W5mrHC4pKSLfBN1ZEiVnd1VZ2rGJr00XHIOm3tlmkIGeWfNAbwpSqaBwaWUtFkxfyofo8s6vbctYp24BNenicDIVegkOunLrY3pQBWiix8+TAINCIIVK2UN1DLxRt5Fi4WvM9Et7Iep74bqpTdt5Cq+Bc8Re0A57CcJsUHLVSK5i3bHcQHLZ7XcYzUY1SljW80UWYwyH0O/K8lGRoQqZS833A26Gz9U8WJsj4I9vegBxj2zKPlh9+mWbWCosry1nUgOG6/CJGbT6mYckPF38HlBHrna40zdWmYu9HRZHpOioSwMkIM8IJjd7AUJ5KK9xzqM75cOG0cFc=
 before_install:
-- chmod 600 ~/.ssh/id_rsa
 - openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp ssh_config ~/.ssh/config
+- git config user.email "wanglj7@mail.sustech.edu.cn"
+- git config user.name "median-lab"
 before_script:
   - chmod +x ./_includes/scripts/cibuild
 script: "./_includes/scripts/cibuild"
